@@ -12,7 +12,7 @@ MAX_SUMMARY_SIZE = 350
 def getPage(query):
     wikipedia.set_lang("en")
     article = query.replace(" ","_")
-    content = wikipedia.summary(article, sentences="5") # gets summary for the article
+    content = wikipedia.summary(article, sentences="6") # gets summary for the article
     '''
     results =""
     if(len(content)<0):
