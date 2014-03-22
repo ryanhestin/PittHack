@@ -32,7 +32,7 @@ def getPage(query, lang='en'):
     try:
         page = wikipedia.page(query)
         title = page.title
-        content = wikipedia.summary(title, sentences="6") # gets summary for the article
+        content = wikipedia.summary(title, sentences="2") # gets summary for the article
         title = title + ": "
     except:
         pass
