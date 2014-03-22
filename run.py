@@ -9,7 +9,7 @@ def hello_monkey():
  	
     resp = twilio.twiml.Response()
     output = request.get('Body', None)
-    resp.message("Woof.")
+    resp.message("Woof. " + output)
     #print(request.value.get('Body', None))
 
 
