@@ -6,6 +6,7 @@ import sys
 import wikipedia
 import re
 from collections import defaultdict
+import twitter
 MAX_SUMMARY_SIZE = 350
 
 api = twitter.Api(
