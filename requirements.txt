@@ -4,6 +4,9 @@ MarkupSafe==0.19
 Werkzeug==0.9.4
 beautifulsoup4==4.3.2
 gunicorn==18.0
+httplib2==0.8
 itsdangerous==0.23
 requests==2.2.1
+six==1.6.1
+twilio==3.6.6
 wsgiref==0.1.2
