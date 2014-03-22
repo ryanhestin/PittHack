@@ -14,7 +14,7 @@ def respond_to_query():
    	results = fetcher.getPage(body)
 
 
-    resp.message(body + ": " + results)
+    resp.message(results)
 
 
     return str(resp)

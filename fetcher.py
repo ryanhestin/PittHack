@@ -19,7 +19,7 @@ def getPage(query, lang='en'):
     except:
         content = "Query not found! We're sorry, try a different one! :("
     
-    return content
+    return title + ": " + content
 
 
 def tokenize(text):
