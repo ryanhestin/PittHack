@@ -11,11 +11,12 @@ def respond_to_query():
     resp = twilio.twiml.Response()
     body = request.values.get('Body')
 
-    results = fetcher.getPage(body)
-
+    if body[0] == "@":
+        results = fetcher.getTweet()
+    else:
+        results = fetcher.getPage(body)
 
     resp.message(results)
-
 
     return str(resp)
  
