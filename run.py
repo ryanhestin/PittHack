@@ -8,6 +8,7 @@ def hello_monkey():
     """Respond to incoming calls with a simple text message."""
  	
     resp = twilio.twiml.Response()
+    output = request.get('Body', None)
     resp.message("Woof.")
     #print(request.value.get('Body', None))
 
