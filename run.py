@@ -1,6 +1,6 @@
 from flask import Flask, request, redirect
 import twilio.twiml
-import fetcher.py
+import fetcher
  
 app = Flask(__name__)
  
