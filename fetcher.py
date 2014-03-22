@@ -9,28 +9,16 @@ from collections import defaultdict
 MAX_SUMMARY_SIZE = 350
 
 
-def getPage(query):
-    wikipedia.set_lang("en")
-    article = query.replace(" ","_")
-    content = wikipedia.summary(article, sentences="6") # gets summary for the article
-    '''
-    results =""
-    if(len(content)<0):
-        results = "Not found"
-    else:
-        results = content
-        #print len(results)
-   # print (results)
+def getPage(query, lang='en'):
+    wikipedia.set_lang(lang)
 
-    content_2 = summarize(results, MAX_SUMMARY_SIZE);
-
-    if(len(content)>0):
-       #print("\n\n"+content_2) #parse the summary into the size
-       #print("\n\n" +content_2[0:350])
-       return content_2[0:350]
-    else:
-       return "Not found"
-    '''
+    try:
+        page = wikipedia.page(query)
+        title = page.title
+        content = wikipedia.summary(title, sentences="6") # gets summary for the article
+    except:
+        content = "Query not found! We're sorry, try a different one! :("
+    
     return content
 
 
