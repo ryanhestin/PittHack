@@ -12,7 +12,7 @@ def respond_to_query():
     body = request.values.get('Body')
 
     if body[0] == "@":
-        results = fetcher.getTweet()
+        results = fetcher.getTweet(body[1:])
     else:
         results = fetcher.getPage(body)
 
