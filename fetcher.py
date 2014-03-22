@@ -12,14 +12,18 @@ MAX_SUMMARY_SIZE = 350
 def getPage(query, lang='en'):
     wikipedia.set_lang(lang)
 
+    title
+    content = "Query not found! We're sorry, try a different one! :("
+
     try:
         page = wikipedia.page(query)
         title = page.title
         content = wikipedia.summary(title, sentences="6") # gets summary for the article
+        title = title + ": "
     except:
-        content = "Query not found! We're sorry, try a different one! :("
-    
-    return title + ": " + content
+        pass
+
+    return content
 
 
 def tokenize(text):
