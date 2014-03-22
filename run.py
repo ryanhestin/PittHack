@@ -11,7 +11,7 @@ def respond_to_query():
     resp = twilio.twiml.Response()
     body = request.values.get('Body')
 
-   	results = fetcher.getPage(body)
+    results = fetcher.getPage(body)
 
 
     resp.message(results)
