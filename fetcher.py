@@ -12,7 +12,6 @@ MAX_SUMMARY_SIZE = 350
 def getPage(query, lang='en'):
     wikipedia.set_lang(lang)
 
-    title
     content = "Query not found! We're sorry, try a different one! :("
 
     try:
