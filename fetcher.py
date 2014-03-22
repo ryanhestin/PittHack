@@ -18,7 +18,7 @@ api = twitter.Api(
 
 
 def getTweet(query):
-    statuses = api.GetUserTimeline(query)
+    statuses = api.GetUserTimeline(screen_name=query, count=1)
     s = statuses[0];
     return s.text;
 
