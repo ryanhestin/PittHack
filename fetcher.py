@@ -17,10 +17,12 @@ api = twitter.Api(
 )
 
 
+
+
 def getTweet(query):
 
 
-    result ="Tweet not found >:("
+    result ="Twitter user or tweet not found. Sorry :("
     searchObj = re.search( r'-\d+$', query, re.M|re.I)
     #Parse out if there dash exists
     if searchObj:
