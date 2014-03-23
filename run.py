@@ -11,6 +11,8 @@ def respond_to_query():
     resp = twilio.twiml.Response()
     body = request.values.get('Body')
 
+    print(body)
+
     if body[0:3] == "help" or body[0:3] == "Help" or body[0:3] == "HELP":
         resp.message("Wikter Commands:\n-Type any series of words to search wikipedia for info\n-Type any search then \"-<0-20>\" to get more info on the topic\n-Type \"@<twitter_handle>\" to get the latest tweet from any twitter handle\n-Type \"@<twitter_handle> -<1-9>\" to get different tweets")
         return str(resp)

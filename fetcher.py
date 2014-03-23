@@ -26,6 +26,8 @@ def getTweet(query):
     #tweet_count = ?
     ###################################
 
+    # NEEDS ERROR CHECKING
+    #comment the line below out once updated
     tweet_count = 1
 
 
