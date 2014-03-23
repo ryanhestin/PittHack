@@ -15,4 +15,4 @@ Looking forward from the Pitt Hackathon weekend, we look to incorporate differen
 
 
 
-![alt tag](http://url/to/img.png)
+![alt tag](https://p.gr-assets.com/540x540/fit/hostedimages/1384008962/6740869.jpg)
