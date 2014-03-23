@@ -104,9 +104,14 @@ def wolframRules(query):
             if count >300:
                 return result
             else:
-                result = result + (q_result.text).encode('utf-8') +". "
+                result = result + unidecode(q_result.text) +". "
+               #print(unidecode(q_result.text))
     except:
         pass
+
+    if(len(result)==0):
+        result = "No results found. Try another query :("
+
     return result
 
 

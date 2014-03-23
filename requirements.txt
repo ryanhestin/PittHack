@@ -1,6 +1,7 @@
 Flask==0.10.1
 Jinja2==2.7.2
 MarkupSafe==0.19
+Unidecode==0.04.14
 Werkzeug==0.9.4
 beautifulsoup4==4.3.2
 duckduckgo2==0.242
