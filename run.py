@@ -20,9 +20,9 @@ def respond_to_query():
     if body[0] == "@":
         results = fetcher.getTweet(body[1:])
     elif body[-2:] == "-w":
-        results = fetcher.wolframRules(body[:-3].lower())
+        results = fetcher.wolframRules(body[:-3])
     else:
-        results = fetcher.getPage(body.lower())
+        results = fetcher.getPage(body)
 
     resp.message(results)
 
