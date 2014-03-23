@@ -18,8 +18,19 @@ api = twitter.Api(
 
 
 def getTweet(query):
-    statuses = api.GetUserTimeline(screen_name=query, count=1)
-    s = statuses[0];
+
+    #Parse out if there dash exists
+
+
+
+    #tweet_count = ?
+    ###################################
+
+    tweet_count = 1
+
+
+    statuses = api.GetUserTimeline(screen_name=query, count=tweet_count)
+    s = statuses[-1];
     return s.text;
 
 
