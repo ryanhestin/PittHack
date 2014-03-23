@@ -40,10 +40,4 @@ def getPage(query, lang='en'):
     return content
 
 
-def tokenize(text):
-    '''Very simple white space tokenizer, in real life we'll be much more
-    fancy.
-    '''
-    return text.split()
-
 
