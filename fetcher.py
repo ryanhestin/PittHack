@@ -19,21 +19,28 @@ api = twitter.Api(
 
 def getTweet(query):
 
+
+    result ="Tweet not found >:("
+    searchObj = re.search( r'-\d+$', query, re.M|re.I)
     #Parse out if there dash exists
+    if searchObj:
+        tweet_num = searchObj.group()[1:]
+        real_query = query[0: len(query)-len(searchObj.group())]
 
 
+        query = real_query
+        tweet_count = tweet_num
 
-    #tweet_count = ?
-    ###################################
+    else:
+        tweet_count = 1
 
-    # NEEDS ERROR CHECKING
-    #comment the line below out once updated
-    tweet_count = 1
-
-
-    statuses = api.GetUserTimeline(screen_name=query, count=tweet_count)
-    s = statuses[-1];
-    return s.text;
+    try:
+        statuses = api.GetUserTimeline(screen_name=query, count=tweet_count)
+        s = statuses[-1]
+        result = s.text
+    except:
+        pass
+    return result;
 
 
 
