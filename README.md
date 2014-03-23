@@ -19,4 +19,4 @@ Huge shout out to guh6 for working iwth me on this all weekend!
 
 
 
--> ![alt tag](http://images.electricfairground.com/Myra-Kassim-In-the-absence-of-information-we-jump-to-the-worst-conclusions-Framed-Quote-780.png) <-
+![alt tag](http://images.electricfairground.com/Myra-Kassim-In-the-absence-of-information-we-jump-to-the-worst-conclusions-Framed-Quote-780.png)
