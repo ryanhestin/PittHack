@@ -29,13 +29,40 @@ def getPage(query, lang='en'):
 
     content = "Query not found! We're sorry, try a different one! :("
 
-    try:
-        page = wikipedia.page(query)
-        title = page.title
-        content = wikipedia.summary(title, sentences="2") # gets summary for the article
-        title = title + ": "
-    except:
-        pass
+
+
+    searchObj = re.search( r'-\d+$', query, re.M|re.I)
+
+    if searchObj: #if the page number is inside query
+        #print ("found")
+        page_num = searchObj.group()[1:] #gets the number of page without the dash
+        real_query = query[0: len(query)-len(searchObj.group())]
+        print(real_query)
+        print(page_num)
+        try:
+            page = wikipedia.page(real_query)
+            pageContent = page.content
+            #print(pageContent)
+
+            sentence_arr = pageContent.split(". ")
+
+            start = int(page_num)+1
+            stop =  start +2
+            content = ""
+            for x in range (start, stop):
+                #print sentence_arr[x]
+                content = content + sentence_arr[x] +". " # this is the returned result
+        except:
+            pass
+
+    else: #page number not inside query
+        try:
+            page = wikipedia.page(query)
+            title = page.title
+            content = wikipedia.summary(title, sentences="2") # gets summary for the article
+            title = title + ": "
+        except:
+            pass
 
     return content
 
