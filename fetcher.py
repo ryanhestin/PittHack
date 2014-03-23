@@ -91,7 +91,7 @@ def getPage(query, lang='en'):
 
 def wolframRules(query):
 
-    result =""
+    result = ""
     res = client.query(query)
 
 
