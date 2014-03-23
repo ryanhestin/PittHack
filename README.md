@@ -14,7 +14,7 @@ Looking forward from the Pitt Hackathon weekend, we look to incorporate differen
 
 
 
-Huge shout out to guh6 for working iwth me on this all weekend!
+Huge shout out to guh6 for working with me on this all weekend!
 
 
 
