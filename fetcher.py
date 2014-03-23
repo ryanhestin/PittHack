@@ -7,6 +7,7 @@ import wikipedia
 import re
 from collections import defaultdict
 import twitter
+import wolframalpha
 MAX_SUMMARY_SIZE = 350
 
 api = twitter.Api(
@@ -16,7 +17,7 @@ api = twitter.Api(
     access_token_secret='ME4IKOjjoUbHpTWH8v2tQRSFPAQ1b24Xo166afOfb4o3t'
 )
 
-
+client = wolframalpha.Client("QGHEE9-9T85V42V8K")
 
 
 def getTweet(query):
@@ -88,5 +89,24 @@ def getPage(query, lang='en'):
 
     return content
 
+def wolframRules(query):
+
+    result =""
+    res = client.query(query)
+
+
+
+    try:
+        for q_result in res:
+            #print (q_result.text)
+            print("\n")
+            count = len(result) + len((q_result.text).encode('utf-8'))
+            if count >300:
+                return result
+            else:
+                result = result + (q_result.text).encode('utf-8') +". "
+    except:
+        pass
+    return result
 
 
