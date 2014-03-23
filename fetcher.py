@@ -110,7 +110,7 @@ def wolframRules(query):
         pass
 
     if(len(result)==0):
-        result = "No results found. Try another query :("
+        result = "No results found for Wolfram. Try another query :("
 
     return result
 
