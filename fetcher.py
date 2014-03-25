@@ -10,6 +10,10 @@ import twitter
 import wolframalpha
 MAX_SUMMARY_SIZE = 350
 
+
+
+#Oh, to be young and stupid. These are old keys that no longer work. Future commit for hiding these will be coming soon
+
 api = twitter.Api(
     consumer_key='Y4ThdncoRUdVTwcItPDrA', 
     consumer_secret='vVbQzGXO1RpN4gh70O2rCyt050vuinvTsb8I9GHyde0', 
